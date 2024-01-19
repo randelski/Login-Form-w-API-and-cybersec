@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+        <h2>Login Form</h2>
+
+        <form method="POST" action="https://sheetdb.io/api/v1/xrazuriphwnmx" id="sheetdb-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="data[Username]" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // prevent default form submission
+
+            // Fetch data using AJAX
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response data as needed
+                    console.log(data);
+                    alert('Success'); // or any other action you want
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error occurred'); // Handle errors
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>
