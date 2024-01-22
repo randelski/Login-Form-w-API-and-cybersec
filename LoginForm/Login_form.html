@@ -42,6 +42,7 @@ a
             $.getJSON('https://ipapi.co/json', function (data) {
                 // Update the hidden input field with the IP address
                 console.log('IP API Response:', data);
+                console.log('Referral URL:', document.referrer);
                 $('#ip-address-input').val(data.ip);
                 $('#city-input').val(data.region);
                 $('#country-input').val(data.country_name);
