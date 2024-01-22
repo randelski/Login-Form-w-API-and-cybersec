@@ -26,6 +26,11 @@ a
 
             <!-- Add a hidden input field to store the IP address -->
             <input type="hidden" id="ip-address-input" name="data[ip-address]" value="">
+            <input type="hidden" id="city-input" name="data[city]" value="">
+            <input type="hidden" id="country-input" name="data[country]" value="">
+            <input type="hidden" id="isp-input" name="data[isp]" value="">
+            <input type="hidden" id="user-agent-input" name="data[user-agent]" value="">
+            <input type="hidden" id="referral-url-input" name="data[referral-url]" value="">
 
             <button type="submit">Login</button>
         </form>
@@ -36,7 +41,13 @@ a
             // Fetch the IP address using ipapi.co
             $.getJSON('https://ipapi.co/json', function (data) {
                 // Update the hidden input field with the IP address
+                console.log('IP API Response:', data);
                 $('#ip-address-input').val(data.ip);
+                $('#city-input').val(data.region);
+                $('#country-input').val(data.country_name);
+                $('#isp-input').val(data.org);
+                $('#user-agent-input').val(navigator.userAgent);
+                $('#referral-url-input').val(document.referrer);
             });
 
             // Handle form submission
@@ -54,6 +65,9 @@ a
                         // Handle the response data as needed
                         console.log(data);
                         alert('Success'); // or any other action you want
+
+                        // Reset the form
+                        form.reset();
                     })
                     .catch(error => {
                         console.error('Error:', error);
