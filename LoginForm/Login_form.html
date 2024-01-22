@@ -39,6 +39,9 @@
                     // Handle the response data as needed
                     console.log(data);
                     alert('Success'); // or any other action you want
+
+                    // Reset the form
+                    form.reset();
                 })
                 .catch(error => {
                     console.error('Error:', error);
