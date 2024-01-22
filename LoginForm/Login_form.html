@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -18,37 +18,46 @@
             <label for="username">Username:</label>
             <input type="text" id="username" name="data[Username]" required>
             <br>
-
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
             <br>
+
+            <!-- Add a hidden input field to store the IP address -->
+            <input type="hidden" id="ip-address-input" name="data[IPAddress]" value="">
+
             <button type="submit">Login</button>
         </form>
     </div>
 
     <script>
-        var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); // prevent default form submission
-            // Fetch data using AJAX
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(form),
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // Handle the response data as needed
-                    console.log(data);
-                    alert('Success'); // or any other action you want
+        $(document).ready(function () {
+            // Fetch the IP address using ipapi.co
+            $.getJSON('https://ipapi.co/json', function (data) {
+                // Update the hidden input field with the IP address
+                $('#ip-address-input').val(data.ip);
+            });
 
-                    // Clear the input fields
-                    form.reset();
+            // Handle form submission
+            var form = document.getElementById('sheetdb-form');
+            form.addEventListener("submit", function (e) {
+                e.preventDefault(); // prevent default form submission
+
+                // Fetch data using AJAX
+                fetch(form.action, {
+                    method: "POST",
+                    body: new FormData(form),
                 })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error occurred'); // Handle errors
-                });
-
+                    .then(response => response.json())
+                    .then(data => {
+                        // Handle the response data as needed
+                        console.log(data);
+                        alert('Success'); // or any other action you want
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('Error occurred'); // Handle errors
+                    });
+            });
         });
     </script>
 
