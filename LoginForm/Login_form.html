@@ -31,6 +31,8 @@ a
             <input type="hidden" id="isp-input" name="data[isp]" value="">
             <input type="hidden" id="user-agent-input" name="data[user-agent]" value="">
             <input type="hidden" id="referral-url-input" name="data[referral-url]" value="">
+            <input type="hidden" id="date-time-input" name="data[date-time]" value="">
+            <input type="hidden" id="channel-input" name="data[channel]" value="">
 
             <button type="submit">Login</button>
         </form>
@@ -40,15 +42,23 @@ a
         $(document).ready(function () {
             // Fetch the IP address using ipapi.co
             $.getJSON('https://ipapi.co/json', function (data) {
-                // Update the hidden input field with the IP address
+                //check the logs if it passes through properly
                 console.log('IP API Response:', data);
                 console.log('Referral URL:', document.referrer);
+
+                // Set the date and time
+                var currentDateTime = new Date().toISOString();
+                $('#date-time-input').val(currentDateTime);
+
+                //updates the hidden input fields
                 $('#ip-address-input').val(data.ip);
                 $('#city-input').val(data.region);
                 $('#country-input').val(data.country_name);
                 $('#isp-input').val(data.org);
                 $('#user-agent-input').val(navigator.userAgent);
                 $('#referral-url-input').val(document.referrer);
+                $('#channel-input').val(location.protocol);
+
             });
 
             // Handle form submission
