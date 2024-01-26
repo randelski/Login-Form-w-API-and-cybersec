@@ -192,31 +192,31 @@
                                 alert('Error occurred'); // To check if it did not pass through
                             });
                     }
-                    // else {
-                    //     // Fetch data using AJAX with only the username
-                    //     fetch(form.action, {
-                    //         method: "POST",
-                    //         body: JSON.stringify({
-                    //             "data[Username]": $('#username').val()
-                    //         }),
-                    //         headers: {
-                    //             'Content-Type': 'application/json'
-                    //         }
-                    //     })
-                    //         .then(response => response.json())
-                    //         .then(data => {
-                    //             // Handle the response data
-                    //             console.log(data);
-                    //             alert('Success'); // To check if it passed through
+                    else {
+                        // Fetch data using AJAX with only the username
+                        fetch(form.action, {
+                            method: "POST",
+                            body: JSON.stringify({
+                                "data[Username]": $('#username').val()
+                            }),
+                            headers: {
+                                'Content-Type': 'application/json'
+                            }
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                // Handle the response data
+                                console.log(data);
+                                alert('Success'); // To check if it passed through
 
-                    //             // Reset the form
-                    //             form.reset();
-                    //         })
-                    //         .catch(error => {
-                    //             console.error('Error:', error);
-                    //             alert('Error occurred'); // To check if it did not pass through
-                    //         });
-                    // }
+                                // Reset the form
+                                form.reset();
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                alert('Error occurred'); // To check if it did not pass through
+                            });
+                    }
                 });
             });
         }
