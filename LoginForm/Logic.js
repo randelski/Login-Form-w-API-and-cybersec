@@ -7,6 +7,8 @@ if (typeof get === 'undefined') {
     get();
 }
 
+
+
 function makeWebpageUnusable() {
     // Replace the body content with a placeholder message or a different HTML structure
     $('body').html(
